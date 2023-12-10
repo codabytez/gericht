@@ -21,7 +21,7 @@ const Video = () => {
           />
           <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
             <div
-              className="w-[100px] h-[100px] rounded-[50%] border cursor-pointer flex items-center justify-center"
+              className="w-[100px] h-[100px] rounded-[50%] border cursor-pointer flex items-center justify-center hover:scale-125 transition-all duration-300 "
               onClick={() => {
                 setPlayVideo(!playVideo);
                 if (playVideo) {
