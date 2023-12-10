@@ -1,7 +1,6 @@
 import CustomButton from "./CustomButton";
 import aboutBG from "../assets/about_bg.png";
 import knive from "../assets/savernake-knives.png";
-import g from "../assets/g.svg";
 import spoon from "../assets/spoon.svg";
 import { motion } from "framer-motion";
 import G from "./G";
