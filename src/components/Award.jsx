@@ -1,6 +1,6 @@
 import Header from "./Header";
-import bilGourmond from "../assets/award_1.svg";
-import risingStar from "../assets/award_2.svg";
+import risingStar from "../assets/award_1.svg";
+import bilGourmond from "../assets/award_2.svg";
 import aaHospitality from "../assets/award_5.svg";
 import outstandingChef from "../assets/award_3.svg";
 import awardImg from "../assets/mgg-vitchakorn.png";
@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 const variants = {
   initial: {
     opacity: 0,
-    x: -500,
+    x: -200,
   },
   animate: {
     opacity: 1,
@@ -33,7 +33,7 @@ const awardVariants = {
     scale: 1,
     transition: {
       delayChildren: 0.5,
-      staggerChildren: 1,
+      staggerChildren: 0.7,
     },
   },
 };
@@ -41,7 +41,7 @@ const awardVariants = {
 const Award = () => {
   return (
     <>
-      <section className="flex items-center justify-center gap-28 p-32 h-screen relative overflow-x-hidden">
+      <section className="flex flex-col xl:flex-row items-center xl:justify-center gap-28 lg:p-32 xl:h-screen relative overflow-hidden">
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10 opacity-50"
           style={{
@@ -50,16 +50,16 @@ const Award = () => {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
-        ></div>
+        />
         <motion.div
-          className="flex flex-col justify-center items-start gap-16 max-w-[700px]"
+          className="flex flex-col justify-center items-start gap-16 w-full lg:max-w-[700px] lg:w-auto pt-10 px-5 xl:pt-0"
           variants={variants}
           initial="initial"
           whileInView="animate"
         >
           <Header heading="Awards & recognition" subHeading="Our Laurels" />
           <motion.div
-            className="flex justify-center items-start gap-8"
+            className="flex  flex-col lg:flex-row justify-center items-start gap-8"
             variants={awardVariants}
             initial="initial"
             whileInView="animate"
@@ -96,7 +96,7 @@ const Award = () => {
           </motion.div>
 
           <motion.div
-            className="flex justify-center items-start gap-8"
+            className="flex  flex-col lg:flex-row justify-center items-start gap-8"
             variants={awardVariants}
             initial="initial"
             whileInView="animate"
@@ -132,7 +132,7 @@ const Award = () => {
             </motion.div>
           </motion.div>
         </motion.div>
-        <div className="w-[483px] pl-[72px] relative">
+        <div className="lg:w-[483px] pl-[72px] relative">
           <img
             src={awardImg}
             alt="Mgg Vitchakorn"

@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 const menuVariants = {
   initial: {
     opacity: 0,
-    x: -500,
+    x: -200,
   },
   animate: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.5,
-      staggerChildren: 1,
+      staggerChildren: 0.5,
     },
   },
 };
@@ -21,14 +21,14 @@ const menuVariants = {
 const cocktailVariants = {
   initial: {
     opacity: 0,
-    x: 500,
+    x: 200,
   },
   animate: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.5,
-      staggerChildren: 1,
+      staggerChildren: 0.5,
     },
   },
 };
@@ -36,10 +36,10 @@ const cocktailVariants = {
 const Menu = () => {
   return (
     <>
-      <section className="bg-[#0C0B08] min-h-screen flex w-full items-center px-16 py-28 overflow-x-hidden">
+      <section className="bg-[#0C0B08] min-h-screen flex w-full items-center lg:px-16 py-28 overflow-x-hidden">
         <div className="w-full flex flex-col gap-16">
           <div className="flex flex-col gap-2 items-center">
-            <h3 className="text-white text-[23px] font-bold leading-[29.9px] tracking-[0.92px] capitalize">
+            <h3 className="text-white text-[23px] font-bold leading-[29.9px] tracking-[0.92px] capitalize text-center">
               Menu that fits you palatte
             </h3>
             <img src={spoon} alt="spoon" />
@@ -47,9 +47,9 @@ const Menu = () => {
               Today's Special
             </h2>
           </div>
-          <div className="flex gap-8 flex-1 items-center justify-center">
+          <div className="flex flex-col lg:flex-row gap-8 flex-1 items-center justify-center">
             <motion.div
-              className="flex flex-col gap-10 flex-1 max-w-[412px]"
+              className="flex flex-col gap-10 flex-1 w-full px-5 lg:max-w-[412px] lg:w-auto"
               variants={menuVariants}
               initial="initial"
               whileInView="animate"
@@ -72,11 +72,11 @@ const Menu = () => {
                     Chapel Hill
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $56
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   AU | Bottle
                 </p>
               </motion.div>
@@ -93,11 +93,11 @@ const Menu = () => {
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
 
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $59
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   AR | Bottle
                 </p>
               </motion.div>
@@ -114,11 +114,11 @@ const Menu = () => {
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
 
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $44
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   FR | 750 ml
                 </p>
               </motion.div>
@@ -135,11 +135,11 @@ const Menu = () => {
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
 
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $31
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   CA | 750 ml
                 </p>
               </motion.div>
@@ -156,22 +156,22 @@ const Menu = () => {
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
 
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $26
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   IE | 750 ml
                 </p>
               </motion.div>
             </motion.div>
 
-            <div>
+            <div className="px-5 lg:px-0 lg:hidden xl:flex">
               <img src={wine} alt="wine" className="object-cover" />
             </div>
 
             <motion.div
-              className="flex flex-col gap-10 flex-1 max-w-[412px]"
+              className="flex flex-col gap-10 flex-1 w-full px-5 lg:max-w-[412px] lg:w-auto"
               variants={cocktailVariants}
               initial="initial"
               whileInView="animate"
@@ -194,11 +194,11 @@ const Menu = () => {
                     Aperol Spritz
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $20
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   Aperol | Villa Marchesi prosecco | soda | 30ml
                 </p>
               </motion.div>
@@ -214,11 +214,11 @@ const Menu = () => {
                     Dark 'N' Stormy
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $16
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   Dark rum | Ginger beer | Slice of lime.
                 </p>
               </motion.div>
@@ -234,11 +234,11 @@ const Menu = () => {
                     Daiquiri
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $10
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   Rum | Citrus juice | Sugar
                 </p>
               </motion.div>
@@ -254,11 +254,11 @@ const Menu = () => {
                     Old Fashioned
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $31
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   Bourbon | Brown sugar | Angostura Bitters
                 </p>
               </motion.div>
@@ -274,11 +274,11 @@ const Menu = () => {
                     Negroni
                   </h5>
                   <div className="h-[1px] w-28 bg-[#FAFAFA]" />
-                  <p className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
+                  <h6 className="text-white lining-nums tabular-nums text-[23px] font-bold leading-[29.9px] capitalize tracking-[0.92px] text-center">
                     $26
-                  </p>
+                  </h6>
                 </motion.div>
-                <p className="text-[#AAA] text-left w-[400px] text-base leading-[28px] tracking-[0.64px]">
+                <p className="text-[#AAA] text-left lg:w-[400px] text-base leading-[28px] tracking-[0.64px]">
                   Gin | Sweet Vermouth | Campari | Orange garnish
                 </p>
               </motion.div>

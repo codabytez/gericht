@@ -2,7 +2,13 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        upright: ["Cormorant Upright", "serif"],
+        vibes: ["Great Vibes", "cursive"],
+        sans: ["Open Sans", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

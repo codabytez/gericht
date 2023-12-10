@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const variants = {
   initial: {
     opacity: 0,
-    x: -500,
+    x: -200,
   },
   animate: {
     opacity: 1,
@@ -25,9 +25,9 @@ const variants = {
 const Contact = () => {
   return (
     <>
-      <section className="h-screen flex justify-center items-center gap-32 overflow-hidden py-28 bg-[#0C0C0C]">
+      <section className="lg:h-screen flex flex-col lg:flex-row lg:justify-center items-center gap-32 overflow-hidden py-28 bg-[#0C0C0C]">
         <motion.div
-          className="flex flex-col justify-center items-start gap-16 max-w-[513px] relative z-30"
+          className="flex flex-col justify-center items-start gap-16 max-w-[513px] relative z-30 px-5"
           variants={variants}
           initial="initial"
           whileInView="animate"
@@ -79,8 +79,8 @@ const Contact = () => {
           </motion.div>
         </motion.div>
         <div className="relative">
-          <div className="w-[350px] h-[350px] bg-[#dcca87] absolute -top-5 -right-5 z-[16]" />
-          <div className="w-[350px] h-[350px] bg-[#dcca87] absolute -bottom-5 -left-5 z-[16]" />
+          <div className="w-[60%] h-3/5 lg:w-[350px] lg:h-[350px] bg-[#dcca87] absolute -top-5 -right-5 z-[16]" />
+          <div className="w-[60%] h-3/5 lg:w-[350px] lg:h-[350px] bg-[#dcca87] absolute -bottom-5 -left-5 z-[16]" />
           <div className="absolute z-[15] right-0 -top-[100%] w-screen h-[calc(100vh+100%)] opacity-50 bg-[#0C0C0C]" />
           <div
             className="absolute z-10 right-0 -top-[100%] w-screen h-[calc(100vh+100%)] opacity-100"
@@ -94,7 +94,7 @@ const Contact = () => {
           <img
             src={contactImg}
             alt="contact Img"
-            className="relative z-20 h-[550px] w-[490px] object-cover object-center"
+            className="relative z-20 lg:h-[550px] w-full lg:w-[490px] p-5 lg:p-0 object-cover object-center"
           />
         </div>
       </section>

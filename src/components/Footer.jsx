@@ -33,7 +33,7 @@ const Footer = () => {
         />
 
         <motion.div
-          className="absolute top-[173px] right-1 flex flex-col items-center gap-4 mr-6 pb-10 justify-end z-10 hover:cursor-pointer"
+          className="hidden absolute top-[173px] right-1 xl:flex flex-col items-center gap-4 mr-6 pb-10 justify-end z-10 hover:cursor-pointer"
           onClick={scrollToTop}
           initial={{ opacity: 1 }}
           animate={{ opacity: 0.5, y: 20 }}
@@ -50,8 +50,8 @@ const Footer = () => {
           </p>
         </motion.div>
 
-        <div className="flex justify-between items-start">
-          <div className="flex flex-col justify-center items-center gap-6 w-[306px]">
+        <div className="flex justify-between lg:items-start flex-col lg:flex-row gap-10">
+          <div className="flex flex-col justify-center items-center gap-6 sm:w-[306px] m-auto lg:m-0">
             <h4 className="text-[#F5EFDB] lining-nums tabular-nums text-[32px] leading-[41.6px] tracking-[1.28px] capitalize">
               Contact Us
             </h4>
@@ -70,25 +70,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center items-center gap-8 w-[438px]">
-            <h4 className="text-[#DCCA87] text-center text-[64px] font-bold leading-[83.2px] tracking-[2.56px] uppercase">
-              Gerícht
-            </h4>
-            <div className="flex flex-col justify-center items-center gap-4">
-              <p className="text-white text-base leading-[28px] tracking-[0.64px] text-center">
-                "The best way to find yourself is to lose yourself in the
-                service of others.”
-              </p>
-              <img src={spoon} alt="spoon" />
-              <div className="flex justify-center items-center gap-4">
-                <img src={facebook} alt="facebook" />
-                <img src={twitter} alt="twitter" />
-                <img src={instagram} alt="instagram" />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-center items-center gap-6 w-[306px]">
+          <div className="flex flex-col justify-center items-center gap-6 sm:w-[306px] m-auto lg:m-0 lg:order-3">
             <h4 className="text-[#F5EFDB] lining-nums tabular-nums text-[32px] leading-[41.6px] tracking-[1.28px] capitalize">
               Working Hours
             </h4>
@@ -108,6 +90,24 @@ const Footer = () => {
                 <p className="text-[#AAA] text-base leading-[28px] tracking-[0.64px] text-center">
                   07:00am -11:00 pm
                 </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center items-center gap-8 sm:w-[438px] m-auto lg:m-0">
+            <h4 className="text-[#DCCA87] text-center text-[64px] font-bold leading-[83.2px] tracking-[2.56px] uppercase">
+              Gerícht
+            </h4>
+            <div className="flex flex-col justify-center items-center gap-4">
+              <p className="text-white text-base leading-[28px] tracking-[0.64px] text-center">
+                "The best way to find yourself is to lose yourself in the
+                service of others.”
+              </p>
+              <img src={spoon} alt="spoon" />
+              <div className="flex justify-center items-center gap-4">
+                <img src={facebook} alt="facebook" />
+                <img src={twitter} alt="twitter" />
+                <img src={instagram} alt="instagram" />
               </div>
             </div>
           </div>

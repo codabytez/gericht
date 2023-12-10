@@ -17,6 +17,19 @@ body {
   background-color: #0c0b08;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Upright", serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
 .testimonial-scroll {
   flex: 0 0 auto;
   min-width: 100%;
@@ -41,4 +54,5 @@ body {
 
 .newsletter_box-shadow {
   box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+  width: min(90%, 2200px);
 }

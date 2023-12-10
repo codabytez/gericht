@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const variants = {
   initial: {
     opacity: 0,
-    x: 500,
+    x: 200,
   },
   animate: {
     opacity: 1,
@@ -25,7 +25,7 @@ const variants = {
 const ChefWord = () => {
   return (
     <>
-      <section className="flex gap-24 justify-center items-center min-h-screen px-24 relative overflow-x-hidden">
+      <section className="flex flex-col lg:flex-row gap-24 justify-center items-center min-h-screen xl:px-24 p-5 relative overflow-x-hidden">
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10 opacity-50"
           style={{
@@ -36,12 +36,16 @@ const ChefWord = () => {
           }}
         />
         <div className="relative">
-          <div className="w-[435px] h-[435px] bg-[#dcca87] absolute -top-5 -right-5" />
-          <div className="w-[435px] h-[435px] bg-[#dcca87] absolute -bottom-5 -left-5" />
-          <img src={lotusMan} alt="chef with lotus" className="relative z-10" />
+          <div className="w-[60%] h-[60%] xl:w-[435px] xl:h-[435px] bg-[#dcca87] absolute -top-5 -right-5" />
+          <div className="w-[60%] h-[60%] xl:w-[435px] xl:h-[435px] bg-[#dcca87] absolute -bottom-5 -left-5" />
+          <img
+            src={lotusMan}
+            alt="chef with lotus"
+            className="relative z-10 min-w-[300px]"
+          />
         </div>
         <motion.div
-          className="flex flex-col gap-16 items-start max-w-[600px]"
+          className="flex flex-col gap-16 items-start xl:max-w-[600px]"
           variants={variants}
           initial="initial"
           whileInView="animate"
@@ -77,7 +81,7 @@ const ChefWord = () => {
             </motion.p>
           </motion.div>
           <motion.p
-            className="text-[#AAA] text-[64px] leading-[83.2px] tracking-[2.56px]"
+            className="text-[#AAA] text-[64px] leading-[83.2px] tracking-[2.56px] font-vibes"
             variants={variants}
           >
             Kevin Luo

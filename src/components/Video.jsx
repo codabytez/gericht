@@ -1,25 +1,44 @@
-import restaurant from "../assets/restaurant.png";
+import { useRef, useState } from "react";
+import meal from "../assets/meal.mp4";
+import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
 
 const Video = () => {
+  const [playVideo, setPlayVideo] = useState(false);
+  const vidRef = useRef();
+
   return (
     <>
-      <section className="relative overflow-x-hidden">
-        <img
-          src={restaurant}
-          alt="restaurant"
-          className="w-auto h-[763px] bg-center bg-cover object-cover object-center mx-auto"
-        />
-        <svg
-          className="absolute top-[calc(322px-60px)] left-[calc(50%-60px)] hover:cursor-pointer hover:scale-110 transition-all select-none hover:invert"
-          xmlns="http://www.w3.org/2000/svg"
-          width="120"
-          height="120"
-          viewBox="0 0 120 120"
-          fill="none"
-        >
-          <circle cx="60" cy="60" r="59.5" stroke="#DCCA87" />
-          <path d="M76 61.5L52 76V47L76 61.5Z" fill="white" />
-        </svg>
+      <section className="overflow-x-hidden">
+        <div className="h-screen relative">
+          <video
+            ref={vidRef}
+            src={meal}
+            type="video/mp4"
+            loop
+            controls={false}
+            muted
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+            <div
+              className="w-[100px] h-[100px] rounded-[50%] border cursor-pointer flex items-center justify-center"
+              onClick={() => {
+                setPlayVideo(!playVideo);
+                if (playVideo) {
+                  vidRef.current.pause();
+                } else {
+                  vidRef.current.play();
+                }
+              }}
+            >
+              {playVideo ? (
+                <BsPauseFill color="#fff" fontSize={30} />
+              ) : (
+                <BsFillPlayFill color="#fff" fontSize={30} />
+              )}
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
