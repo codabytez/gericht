@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0c0b08;
+}
+
+.testimonial-scroll {
+  flex: 0 0 auto;
+  min-width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  animation: scroll 6s linear 0s infinite;
+  animation-play-state: running;
+  animation-delay: 0s;
+  animation-direction: normal;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.newsletter_box-shadow {
+  box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+}
