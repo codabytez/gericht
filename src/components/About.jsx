@@ -43,7 +43,10 @@ const historyVariants = {
 
 const About = () => {
   return (
-    <section className="xl:h-screen flex flex-col lg:flex-row justify-center gap-10 xl:gap-[85px] items-center relative overflow-hidden py-5">
+    <section
+      id="about"
+      className="xl:h-screen flex flex-col lg:flex-row justify-center gap-10 xl:gap-[85px] items-center relative overflow-hidden py-5"
+    >
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10 opacity-50"
         style={{

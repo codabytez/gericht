@@ -36,7 +36,10 @@ const cocktailVariants = {
 const Menu = () => {
   return (
     <>
-      <section className="bg-[#0C0B08] min-h-screen flex w-full items-center lg:px-16 py-28 overflow-x-hidden">
+      <section
+        id="menu"
+        className="bg-[#0C0B08] min-h-screen flex w-full items-center lg:px-16 py-28 overflow-x-hidden"
+      >
         <div className="w-full flex flex-col gap-16">
           <div className="flex flex-col gap-2 items-center">
             <h3 className="text-white text-[23px] font-bold leading-[29.9px] tracking-[0.92px] capitalize text-center">

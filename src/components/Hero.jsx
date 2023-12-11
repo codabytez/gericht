@@ -29,7 +29,7 @@ const textVariants = {
 
 const Hero = () => {
   return (
-    <section className="bg-[#0C0C0C] overflow-x-hidden">
+    <section id="home" className="bg-[#0C0C0C] overflow-x-hidden">
       <div className=" relative min-h-screen lg:h-[calc(100vh-100px)] lg:min-h-0 flex items-center">
         <div className="flex-col lg:flex-row m-auto w-[80%] max-w-7xl flex gap-20 xl:gap-[180px]  items-center h-full">
           <motion.div

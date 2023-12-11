@@ -37,7 +37,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  animation: scroll 6s linear 0s infinite;
+  animation: scroll 20s linear 0s infinite;
   animation-play-state: running;
   animation-delay: 0s;
   animation-direction: normal;

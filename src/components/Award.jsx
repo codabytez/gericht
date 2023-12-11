@@ -41,7 +41,10 @@ const awardVariants = {
 const Award = () => {
   return (
     <>
-      <section className="flex flex-col xl:flex-row items-center xl:justify-center gap-28 lg:p-32 xl:h-screen relative overflow-hidden">
+      <section
+        id="award"
+        className="flex flex-col xl:flex-row items-center xl:justify-center gap-28 lg:p-32 xl:h-screen relative overflow-hidden"
+      >
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10 opacity-50"
           style={{

@@ -25,7 +25,10 @@ const variants = {
 const Contact = () => {
   return (
     <>
-      <section className="lg:h-screen flex flex-col lg:flex-row lg:justify-center items-center gap-32 overflow-hidden py-28 bg-[#0C0C0C]">
+      <section
+        id="contact"
+        className="lg:h-screen flex flex-col lg:flex-row lg:justify-center items-center gap-32 overflow-hidden py-28 bg-[#0C0C0C]"
+      >
         <motion.div
           className="flex flex-col justify-center items-start gap-16 max-w-[513px] relative z-30 px-5"
           variants={variants}
